@@ -4,8 +4,10 @@ services:
     image: pankiev/mmorpg_apache
     container_name: mmorpg_apache
     ports:
-      - 81:80
+      - 80:80
     restart: on-failure
+    volumes:
+      - ./app:/usr/local/apache2/htdocs/app/
     
       
     
